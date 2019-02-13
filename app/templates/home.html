@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="container">
+  <h2>Welcome to carbon emmmison report page</h2>
+</div>
+<br>
+
+<div class="container">
+  <button id= "showCountry" class="btn btn-primary" >Search for country here!</button>
+  <form  id = "countryForm" action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.country_name.label }}<br>
+            {{ form.country_name() }}
+        </p>
+        <p>{{ form.submit() }}</p>
+  </form>
+</div>
+
+
+<div class="container" id="results"></div>
+
+
+
+
+{% endblock  %}
